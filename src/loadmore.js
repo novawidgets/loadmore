@@ -79,15 +79,15 @@
             }
             this._changeHintCont('Default');
             this.isLoading = false;
-            this.s.min = this._getMin();
             if(this.get('mode') == 'replace'){              //若为替换模式，则滚动至顶部
                 this.s._scroll(this.s.max);
             }
             else if(this.get('mode') == 'append' && this.get('page') !== 1){
                 //var o = this.s.offset - this.$element.height();     //若为append模式，则滚动一屏
                 //this.s._scroll((this.s.min > o)?this.s.min : o);   //内容不够一屏则滚动至底部
-                this.s._scroll(this.get('threshold'));//若为append模式则滚动一点点
+                this.s._scroll(this.s.min-this.get('threshold'));//若为append模式则滚动一点点
             }
+            this.s.min = this._getMin();
         },
 
         prePage: function(){
