@@ -9,7 +9,7 @@
             threshold: 50,      // 拖动范围
             showNextHint: true,        //默认显示往后翻页的提示
             showPreHint: false,     //默认隐藏往前翻页的提示
-            mode: 'replace',  //默认replace替换模式，还可取值append添加模式
+            mode: 'append',  //默认append替换模式，还可取值replace添加模式
             page: 1,            //默认页码从第一页开始
             isLastPage: false,  //当前是否最后一页
             hintContent:{
